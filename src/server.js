@@ -3,6 +3,9 @@ import { log } from "./utils/logger"
 
 const app = express()
 
+// Hook up our routes
+app.use("/", require("./routes"))
+
 // Start the server listening
 const server = app.listen(3000, () => {
   log.info("Graph Demonstration App Running")
