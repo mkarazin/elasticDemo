@@ -13,5 +13,5 @@ Instructions below taken from https://www.elastic.co/guide/en/kibana/current/tut
 
 First download the dataset at https://download.elastic.co/demos/kibana/gettingstarted/shakespeare.json
 
-
+Then run the following command in terminal:
 curl -H 'Content-Type: application/x-ndjson' -XPOST 'localhost:9200/shakespeare/_bulk?pretty' --data-binary @shakespeare.json
