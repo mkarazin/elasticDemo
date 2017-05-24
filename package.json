@@ -19,6 +19,7 @@
   "homepage": "https://github.com/mkarazin/graphDemo#readme",
   "dependencies": {
     "bunyan": "^1.8.10",
+    "elasticsearch": "^13.0.1",
     "express": "^4.15.2"
   },
   "devDependencies": {
