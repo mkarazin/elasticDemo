@@ -8,7 +8,7 @@ app.use("/", require("./routes"))
 
 // Start the server listening
 const server = app.listen(3000, () => {
-  log.info("Graph Demonstration App Running")
+  log.info("Demonstration Express API Running")
 })
 
 // Handle Errors

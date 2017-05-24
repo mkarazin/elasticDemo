@@ -1,2 +1,2 @@
-# graphDemo
-Graph database (neo4j) demonstration project - For database tech talk
+# elasticSearchDemo
+Elasticsearch demonstration project - For database tech talk at Fullstack Academy
