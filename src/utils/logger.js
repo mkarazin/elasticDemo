@@ -1,6 +1,6 @@
 import * as bunyan from 'bunyan';
 
-export const log = bunyan.createLogger(
+const log = bunyan.createLogger(
   {
     name: 'graphDemo',
     level: 'info',
@@ -16,3 +16,7 @@ export const log = bunyan.createLogger(
     ],
   },
 );
+
+export {
+  log,
+};

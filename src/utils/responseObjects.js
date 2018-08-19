@@ -1,5 +1,10 @@
-// Generic success message
-export const Success = (res, data) => {
+/**
+ *  Generic 200 Success response from API
+ * @param res
+ * @param data
+ * @constructor
+ */
+const Success = (res, data) => {
   res.status(200).json(
     {
       meta: {
@@ -8,4 +13,9 @@ export const Success = (res, data) => {
       data,
     },
   );
+};
+
+
+export {
+  Success,
 };
