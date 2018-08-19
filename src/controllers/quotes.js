@@ -1,4 +1,4 @@
-import { ElasticSearchClient } from '../services/elasticsearch';
+import { ElasticSearchService } from '../services';
 import { Success } from '../utils/responseObjects';
 
 class QuotesController {
@@ -6,6 +6,7 @@ class QuotesController {
    * Searches for a given quote
    * @param req
    * @param res
+   * @param next
    * @returns {Promise<void>}
    */
   static async search(req, res, next) {
@@ -14,19 +15,9 @@ class QuotesController {
       const queryString = req.query.searchTerm;
 
       // Perform the search
-      const results = await ElasticSearchClient.search(
-        {
-          body: {
-            query: {
-              match: {
-                text_entry: queryString,
-              },
-            },
-          },
-        },
-      );
+      const results = await ElasticSearchService.searchQuoteText(queryString);
 
-      Success(res, results.hits.hits);
+      Success(res, results);
     } catch (e) {
       // Pass to a higher level error handler
       next(e);
