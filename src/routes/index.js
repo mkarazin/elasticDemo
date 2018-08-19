@@ -9,6 +9,10 @@ const router = new Router();
 router.get('/quotes',
   QuotesController.search);
 
+// Add a new quote
+router.post('/quotes',
+  QuotesController.add);
+
 // For testing & checking if the service is running successfully
 router.get('/healthCheck',
   (req, res) => {
