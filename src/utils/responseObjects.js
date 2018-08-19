@@ -15,9 +15,9 @@ const ImATeaPot = (res) => {
 };
 
 /**
- *  Generic 200 Success response from API
- * @param res
- * @param data
+ * Generic 200 Success response from API
+ * @param res Express response object
+ * @param data Data object to include
  * @constructor
  */
 const Success = (res, data) => {
