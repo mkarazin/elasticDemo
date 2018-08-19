@@ -1,7 +1,15 @@
 import express from 'express';
+import bodyParser from 'body-parser';
+
 import { log } from './utils/logger';
 
 const app = express();
+
+// Connect basic middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true,
+}));
 
 // Hook up our routes
 app.use('/', require('./routes'));
