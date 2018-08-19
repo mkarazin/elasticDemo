@@ -1,18 +1,22 @@
-import * as bunyan from "bunyan"
+import * as bunyan from 'bunyan';
 
-export const log = bunyan.createLogger(
+const log = bunyan.createLogger(
   {
-    name: "graphDemo",
-    level: "info",
+    name: 'graphDemo',
+    level: 'info',
     streams: [
       {
         level: 'info',
-        stream: process.stdout
+        stream: process.stdout,
       },
       {
         level: 'error',
-        path: 'error.log'
-      }
-    ]
-  }
-)
+        path: 'error.log',
+      },
+    ],
+  },
+);
+
+export {
+  log,
+};
