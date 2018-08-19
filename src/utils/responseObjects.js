@@ -31,7 +31,24 @@ const Success = (res, data) => {
   );
 };
 
+/**
+ * Generic 401 invalid parameters error to return from the API
+ * @param res Express response object
+ * @param detailedMessage A string message to include in response
+ */
+const InvalidParameters = (res, detailedMessage) => {
+  res.status(401).json(
+    {
+      errors: {
+        status: 401,
+        title: 'INVALID_PARAMETER',
+        detail: detailedMessage,
+      },
+    },
+  );
+};
 
 export {
   Success,
+  InvalidParameters,
 };
