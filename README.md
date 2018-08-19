@@ -1,5 +1,8 @@
 # elasticSearchDemo
+
 Elasticsearch demonstration project - For database tech talk at Fullstack Academy
+
+Also used later for The Difference Engine during a pull request and code review workshop.
 
 ## To setup elasticSearch on MacOSX with Homebrew
 
