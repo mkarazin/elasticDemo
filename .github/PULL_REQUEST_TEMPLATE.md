@@ -1,6 +1,4 @@
-### Ticket Number:
-
-
+### Ticket: #
 
 ### Describe The Problem Being Solved:
 
