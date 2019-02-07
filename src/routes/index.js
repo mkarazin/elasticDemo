@@ -9,6 +9,9 @@ const router = new Router();
 router.get('/quotes',
   QuotesController.search);
 
+router.get('/node-problems',
+  QuotesController.problems);  
+
 // Add a new quote
 router.post('/quotes',
   QuotesController.add);
