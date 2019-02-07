@@ -20,7 +20,7 @@ const server = app.listen(3000, () => {
 });
 
 // Handle Errors
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   // Log the request with error noted
   log.error('ERROR - %s, %s', req.method, req.url);
 
@@ -34,7 +34,7 @@ app.use((err, req, res) => {
 // Handle 404s
 app.use((req, res, next) => {
   res.status(404).send({
-    message: 'Houston, we\'ve had a problem here',
+    message: 'Problem with the server. Message changed.',
     urlRequested: `${req.method} ${req.url}`,
   });
 });
