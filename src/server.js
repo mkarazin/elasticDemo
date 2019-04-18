@@ -35,6 +35,7 @@ app.use((err, req, res) => {
 app.use((req, res, next) => {
   res.status(404).send({
     message: 'hello',
+    next()
     urlRequested: `${req.method} ${req.url}`,
   });
 });
