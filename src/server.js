@@ -34,7 +34,7 @@ app.use((err, req, res, next) => {
 // Handle 404s
 app.use((req, res, next) => {
   res.status(404).send({
-    message: 'problem fixed',
+    message: 'problem fixed and the bug is solved',
     urlRequested: `${req.method} ${req.url}`,
   });
 });
