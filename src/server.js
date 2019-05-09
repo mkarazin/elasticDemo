@@ -20,7 +20,7 @@ const server = app.listen(3000, () => {
 });
 
 // Handle Errors
-app.use((err, req, res) => {
+app.use((err, req, res, next) => {
   // Log the request with error noted
   log.error('ERROR - %s, %s', req.method, req.url);
 
