@@ -30,7 +30,7 @@ app.use((err, req, res, next) => {
   // Return 500 error code
   res.status(500).send({ message: 'Error. It broken, buddy.' });
 
-  next.err();
+  next(err);
 });
 
 // Handle 404s
