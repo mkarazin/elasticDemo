@@ -1,5 +1,6 @@
-import { ElasticSearchService } from '../services';
-import { Success } from '../utils/responseObjects';
+import { ElasticSearchService } from "../services";
+import { Success } from "../utils/responseObjects";
+import Nicole from "./Nicole";
 
 class QuotesController {
   /**
