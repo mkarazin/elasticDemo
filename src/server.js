@@ -20,7 +20,7 @@ const server = app.listen(3000, () => {
 });
 
 // Handle Errors
-app.use((err, req, res, next) => {  
+app.use((err, req, res, next) => {
   // Log the request with error noted
   log.error('ERROR - %s, %s', req.method, req.url);
 
@@ -32,9 +32,11 @@ app.use((err, req, res, next) => {
 });
 
 // Handle 404s
-app.use((req, res, next) => {
+app.use((err, req, res, next) => {
   res.status(404).send({
-    message: '404: I am the error that you heard about...',
+    feature/15/404errormessage
+    message: 'Ups, we\'ve had a problem here!Wrong dirrectory!',
+ development
     urlRequested: `${req.method} ${req.url}`,
   });
 });
