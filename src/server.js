@@ -34,7 +34,7 @@ app.use((err, req, res, next) => {
 // Handle 404s
 app.use((req, res, next) => {
   res.status(404).send({
-    message: 'Houston, we\'ve had a problem here',
+    message: '404 Error',
     urlRequested: `${req.method} ${req.url}`,
   });
 });
